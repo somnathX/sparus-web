@@ -74,7 +74,7 @@ export default function ServicesPage() {
             and where we&apos;d start digging.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="mt-8 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-accent link-strike"
           >
             Start a thread

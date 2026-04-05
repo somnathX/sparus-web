@@ -8,6 +8,10 @@ export const company = {
   tagline:
     "Product engineering, applied AI, and infrastructure for teams who care what production feels like.",
   linkedinUrl: "https://www.linkedin.com/company/sparus-tech",
+  /** Public profile; leave empty to hide the footer icon */
+  twitterUrl: "",
+  /** Org or company profile; leave empty to hide the footer icon */
+  githubUrl: "",
   contactEmail: "hello@sparustechnology.com",
   privacyEmail: "privacy@sparustechnology.com",
   careersEmail: "careers@sparustechnology.com",

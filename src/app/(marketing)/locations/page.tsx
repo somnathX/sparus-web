@@ -125,7 +125,7 @@ export default function LocationsPage() {
             security and facilities steps ahead of time.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em] text-accent"
           >
             Use the project form

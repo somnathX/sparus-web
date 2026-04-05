@@ -7,6 +7,7 @@ const paths = [
   "/solutions",
   "/locations",
   "/about",
+  "/contact",
   "/privacy",
   "/terms",
 ] as const;

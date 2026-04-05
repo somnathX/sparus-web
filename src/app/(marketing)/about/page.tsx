@@ -91,7 +91,7 @@ export default function AboutPage() {
             same front door so nothing gets lost between time zones.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-3 bg-accent px-8 py-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5"
           >
             Write to us

@@ -63,7 +63,7 @@ export function Hero() {
               className="mt-12 flex flex-wrap items-center gap-4"
             >
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group inline-flex items-center gap-3 bg-accent px-8 py-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5"
               >
                 Brief us

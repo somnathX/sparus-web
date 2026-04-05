@@ -86,7 +86,7 @@ export default function SolutionsPage() {
 
         <div className="mt-20 text-center">
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 border border-foreground px-8 py-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-foreground transition-colors hover:bg-foreground hover:text-background"
           >
             Talk through your roadmap

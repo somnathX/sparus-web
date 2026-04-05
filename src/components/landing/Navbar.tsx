@@ -40,6 +40,8 @@ function NavLink({
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const onContact = pathname === "/contact";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
@@ -58,8 +60,12 @@ export function Navbar() {
             <NavLink key={l.href} href={l.href} label={l.label} />
           ))}
           <Link
-            href="/#contact"
-            className="border border-accent px-5 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-accent transition-colors hover:bg-accent hover:text-ink"
+            href="/contact"
+            className={`border px-5 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.18em] transition-colors hover:bg-accent hover:text-ink ${
+              onContact
+                ? "border-accent bg-accent text-ink"
+                : "border-accent text-accent"
+            }`}
           >
             Start
           </Link>
@@ -95,9 +101,13 @@ export function Navbar() {
                 />
               ))}
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
-                className="w-fit border border-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-accent"
+                className={`w-fit border px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] ${
+                  onContact
+                    ? "border-accent bg-accent text-ink"
+                    : "border-accent text-accent"
+                }`}
               >
                 Start
               </Link>

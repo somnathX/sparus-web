@@ -7,7 +7,7 @@ const footerLinks = [
   { href: "/solutions", label: "Solutions" },
   { href: "/locations", label: "Location" },
   { href: "/about", label: "About" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const legalLinks = [
@@ -15,11 +15,13 @@ const legalLinks = [
   { href: "/terms", label: "Terms" },
 ];
 
-const social = [
+const socialCandidates = [
   { href: company.linkedinUrl, icon: UsersRound, label: "LinkedIn" },
-  { href: "https://twitter.com", icon: MessageCircle, label: "Twitter" },
-  { href: "https://github.com", icon: Code2, label: "GitHub" },
-];
+  { href: company.twitterUrl, icon: MessageCircle, label: "Twitter" },
+  { href: company.githubUrl, icon: Code2, label: "GitHub" },
+] as const;
+
+const social = socialCandidates.filter((s) => s.href.trim() !== "");
 
 export function Footer() {
   return (
