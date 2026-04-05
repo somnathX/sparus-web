@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Karla, Syne } from "next/font/google";
+import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
+import { company } from "@/content/company";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const display = Syne({
@@ -20,20 +23,61 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+const defaultTitle = "Sparus Technology | Innovation & Scalable Tech Solutions";
+const defaultDescription =
+  "Enterprise-grade software development, AI integration, and infrastructure. Sparus Technology delivers reliable, scalable solutions for ambitious teams.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Sparus Technology | Innovation & Scalable Tech Solutions",
+    default: defaultTitle,
     template: "%s | Sparus Technology",
   },
-  description:
-    "Enterprise-grade software development, AI integration, and infrastructure. Sparus Technology delivers reliable, scalable solutions for ambitious teams.",
+  description: defaultDescription,
   keywords: [
     "Sparus Technology",
     "software development",
     "AI integration",
     "cloud infrastructure",
     "enterprise technology",
+    "Udaipur",
+    "India",
+    "product engineering",
   ],
+  authors: [{ name: company.legalName, url: siteUrl }],
+  creator: company.legalName,
+  publisher: company.legalName,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteUrl,
+    siteName: company.legalName,
+    title: defaultTitle,
+    description: defaultDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -47,6 +91,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <OrganizationJsonLd />
         {children}
       </body>
     </html>

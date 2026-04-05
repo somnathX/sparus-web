@@ -7,6 +7,7 @@ export const company = {
   shortName: "Sparus",
   tagline:
     "Product engineering, applied AI, and infrastructure for teams who care what production feels like.",
+  linkedinUrl: "https://www.linkedin.com/company/sparus-tech",
   contactEmail: "hello@sparustechnology.com",
   privacyEmail: "privacy@sparustechnology.com",
   careersEmail: "careers@sparustechnology.com",

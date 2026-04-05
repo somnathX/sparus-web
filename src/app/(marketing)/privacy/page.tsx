@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { company } from "@/content/company";
+import { routeSeo } from "@/lib/route-seo";
 
 export const metadata: Metadata = {
+  ...routeSeo("/privacy"),
   title: "Privacy Policy",
   description: `How ${company.legalName} collects, uses, and protects personal data.`,
 };

@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { companyStoryParagraphs, offices } from "@/content/company";
+import { routeSeo } from "@/lib/route-seo";
 
 export const metadata: Metadata = {
+  ...routeSeo("/about"),
   title: "About Us",
   description:
     "Sparus Technology: engineering from Udaipur, India—how we work with teams worldwide.",

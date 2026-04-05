@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Code2, MessageCircle, UsersRound } from "lucide-react";
+import { company } from "@/content/company";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
@@ -15,7 +16,7 @@ const legalLinks = [
 ];
 
 const social = [
-  { href: "https://linkedin.com", icon: UsersRound, label: "LinkedIn" },
+  { href: company.linkedinUrl, icon: UsersRound, label: "LinkedIn" },
   { href: "https://twitter.com", icon: MessageCircle, label: "Twitter" },
   { href: "https://github.com", icon: Code2, label: "GitHub" },
 ];

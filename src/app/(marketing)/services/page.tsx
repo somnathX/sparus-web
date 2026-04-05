@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { routeSeo } from "@/lib/route-seo";
 
 export const metadata: Metadata = {
+  ...routeSeo("/services"),
   title: "Services",
   description:
     "Software development, AI integration, and infrastructure services from Sparus Technology.",

@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin, Mail, Clock, ArrowUpRight } from "lucide-react";
 import { company, offices } from "@/content/company";
+import { routeSeo } from "@/lib/route-seo";
 
 export const metadata: Metadata = {
+  ...routeSeo("/locations"),
   title: "Location",
   description:
     "Sparus Technology headquarters in Udaipur, Rajasthan — hours, contact, and directions.",

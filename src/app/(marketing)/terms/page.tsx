@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { company } from "@/content/company";
+import { routeSeo } from "@/lib/route-seo";
 
 export const metadata: Metadata = {
+  ...routeSeo("/terms"),
   title: "Terms of Service",
   description: `Terms and conditions for using ${company.legalName}'s website and introductory services.`,
 };
