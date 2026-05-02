@@ -44,7 +44,7 @@ export function Footer() {
                 Studio
               </span>
               <br />
-              Udaipur, Rajasthan, India
+              Udaipur, India · Dubai, UAE
             </p>
           </div>
 
@@ -104,7 +104,7 @@ export function Footer() {
             © {new Date().getFullYear()} Sparus Technology
           </p>
           <p className="font-mono text-[10px] text-muted/70">
-            India (IST) · Remote-friendly worldwide
+            India (IST) · UAE (GST) · Remote-friendly worldwide
           </p>
         </div>
       </div>

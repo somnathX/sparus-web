@@ -30,7 +30,7 @@ export function Hero() {
                 Software · AI systems · Infrastructure
               </p>
               <p className="font-mono text-[10px] leading-relaxed text-muted/80 uppercase tracking-[0.2em]">
-                HQ · Udaipur, Rajasthan, India
+                HQ · Udaipur, India · Dubai, UAE
               </p>
             </motion.div>
 

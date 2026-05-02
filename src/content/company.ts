@@ -54,4 +54,18 @@ export const offices: Office[] = [
     hours: "Mon–Fri · 10:00–19:00 IST (GMT+5:30)",
     mapQuery: "Udaipur Rajasthan India tech park",
   },
+  {
+    id: "dubai",
+    label: "UAE — Regional Office",
+    city: "Dubai",
+    region: "Dubai",
+    country: "United Arab Emirates",
+    role: "Client engagement & regional operations",
+    addressLines: [
+      "Business Bay (update tower / suite to your exact address)",
+      "Dubai, UAE",
+    ],
+    hours: "Sun–Thu · 09:00–18:00 GST (GMT+4)",
+    mapQuery: "Business Bay Dubai UAE",
+  },
 ];
