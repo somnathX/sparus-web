@@ -45,7 +45,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 border-t border-border bg-paper px-5 py-24 text-ink sm:px-8 lg:px-12"
+      className="scroll-mt-20 border-t border-border bg-background px-5 py-24 sm:px-8 sm:py-32 lg:px-12"
     >
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
@@ -62,22 +62,22 @@ export function ContactSection() {
             <h2 className="mt-4 font-heading text-4xl font-bold leading-[1.05] sm:text-5xl">
               Say what you&apos;re building—not what you think we want to hear.
             </h2>
-            <p className="mt-8 text-sm leading-relaxed text-ink/65">
+            <p className="mt-8 text-sm leading-relaxed text-muted">
               We reply within one business day. If it&apos;s not a fit,
               we&apos;ll say so and try to point you somewhere useful.
             </p>
-            <div className="mt-10 space-y-6 border border-ink/10 bg-ink/[0.03] p-6">
+            <div className="mt-10 space-y-6 glass-panel p-6">
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
                 Where we work
               </p>
-              <ul className="space-y-4 text-sm text-ink/75">
+              <ul className="space-y-4 text-sm text-muted">
                 {offices.map((o) => (
                   <li key={o.id}>
-                    <span className="font-medium text-ink">
+                    <span className="font-medium text-foreground">
                       {o.city}, {o.region}
                     </span>
-                    <span className="text-ink/50"> — </span>
-                    <span className="text-ink/65">{o.role}</span>
+                    <span className="text-muted/50"> — </span>
+                    <span>{o.role}</span>
                   </li>
                 ))}
               </ul>
@@ -90,13 +90,13 @@ export function ContactSection() {
               </Link>
               <a
                 href={`mailto:${company.contactEmail}`}
-                className="block font-mono text-[11px] text-ink/80 hover:text-accent"
+                className="block font-mono text-[11px] text-muted hover:text-accent"
               >
                 {company.contactEmail}
               </a>
             </div>
             <div className="mt-10 hidden border-l-2 border-accent pl-6 lg:block">
-              <p className="font-heading text-lg italic leading-snug text-ink/80">
+              <p className="font-heading text-lg italic leading-snug text-foreground/80">
                 The best briefs read like a memo, not a pitch deck.
               </p>
             </div>
@@ -107,14 +107,14 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.06 }}
-            className="lg:col-span-7"
+            className="glass-panel p-8 sm:p-10 lg:col-span-7"
           >
             {submitted ? (
-              <div className="border border-ink/10 bg-background/5 p-10 sm:p-12">
-                <p className="font-heading text-2xl font-bold text-ink">
+              <div className="p-4 text-center sm:p-8">
+                <p className="font-heading text-2xl font-bold text-foreground">
                   Received.
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-ink/65">
+                <p className="mt-4 text-sm leading-relaxed text-muted">
                   This demo doesn&apos;t send mail yet—hook up your API route or
                   form backend to capture leads.
                 </p>
@@ -124,7 +124,7 @@ export function ContactSection() {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50"
+                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted"
                   >
                     Name
                   </label>
@@ -153,7 +153,7 @@ export function ContactSection() {
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50"
+                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted"
                   >
                     Email
                   </label>
@@ -182,7 +182,7 @@ export function ContactSection() {
                 <div>
                   <label
                     htmlFor="contact-details"
-                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50"
+                    className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted"
                   >
                     Project
                   </label>
@@ -209,17 +209,17 @@ export function ContactSection() {
 
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-3 bg-ink px-8 py-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-3 bg-accent px-8 py-4 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-ink transition-transform hover:scale-[1.02] sm:w-auto"
                 >
                   Send
                   <ArrowUpRight className="h-4 w-4" />
                 </button>
-                <p className="font-mono text-[9px] leading-relaxed text-ink/45">
+                <p className="font-mono text-[9px] leading-relaxed text-muted/70">
                   By submitting, you agree we may process what you send to
                   respond to your inquiry, as described in our{" "}
                   <Link
                     href="/privacy"
-                    className="text-ink/60 underline underline-offset-2 hover:text-accent"
+                    className="text-muted underline underline-offset-2 hover:text-accent"
                   >
                     Privacy Policy
                   </Link>

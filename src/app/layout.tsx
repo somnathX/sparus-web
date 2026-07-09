@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Karla, Syne } from "next/font/google";
+import { Archivo, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
 import { company } from "@/content/company";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
-const display = Syne({
-  variable: "--font-syne",
+const display = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Karla({
-  variable: "--font-karla",
+const body = DM_Sans({
+  variable: "--font-dm",
   subsets: ["latin"],
   display: "swap",
 });
@@ -91,7 +91,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full scroll-smooth antialiased`}
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <OrganizationJsonLd />
