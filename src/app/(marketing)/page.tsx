@@ -1,23 +1,14 @@
 import type { Metadata } from "next";
+import { HomeExperience } from "@/components/home/home-experience";
 import { routeSeo } from "@/lib/route-seo";
-import { Hero } from "@/components/landing/Hero";
-import { ServicesGrid } from "@/components/landing/ServicesGrid";
-import { TechMarquee } from "@/components/landing/TechMarquee";
-import { LocationsSection } from "@/components/landing/LocationsSection";
-import { ContactSection } from "@/components/landing/ContactSection";
 
 export const metadata: Metadata = {
   ...routeSeo("/"),
+  title: "Sparus Technology — Software that works in production",
+  description:
+    "Sparus Technology is a product-minded engineering company. Software development, AI integration, and infrastructure that holds up in production.",
 };
 
 export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <ServicesGrid />
-      <TechMarquee />
-      <LocationsSection />
-      <ContactSection />
-    </>
-  );
+  return <HomeExperience />;
 }

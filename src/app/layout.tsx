@@ -1,32 +1,28 @@
 import type { Metadata } from "next";
-import { Archivo, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Archivo, Fragment_Mono } from "next/font/google";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
 import { company } from "@/content/company";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
-const display = Archivo({
+const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const body = DM_Sans({
-  variable: "--font-dm",
+const fragmentMono = Fragment_Mono({
+  variable: "--font-fragment-mono",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
 const siteUrl = getSiteUrl();
-const defaultTitle = "Sparus Technology | Innovation & Scalable Tech Solutions";
+const defaultTitle = "Sparus Technology — Software that works in production";
 const defaultDescription =
-  "Enterprise-grade software development, AI integration, and infrastructure. Sparus Technology delivers reliable, scalable solutions for ambitious teams.";
+  "Sparus Technology is a product-minded engineering company. Software development, AI integration, and infrastructure that holds up in production.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -40,10 +36,10 @@ export const metadata: Metadata = {
     "software development",
     "AI integration",
     "cloud infrastructure",
-    "enterprise technology",
-    "Udaipur",
-    "India",
     "product engineering",
+    "Udaipur",
+    "Dubai",
+    "India",
   ],
   authors: [{ name: company.legalName, url: siteUrl }],
   creator: company.legalName,
@@ -91,7 +87,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${fragmentMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <OrganizationJsonLd />
