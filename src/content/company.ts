@@ -65,7 +65,7 @@ export const offices: Office[] = [
       "Business Bay",
       "Dubai, UAE",
     ],
-    hours: "Sun–Thu · 09:00–18:00 GST (GMT+4)",
+    hours: "Mon–Fri · 10:00–19:00 GST (GMT+4)",
     mapQuery: "Business Bay Dubai UAE",
   },
 ];
