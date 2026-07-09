@@ -46,7 +46,7 @@ export const offices: Office[] = [
     country: "India",
     role: "Headquarters, product engineering & delivery center",
     addressLines: [
-      "Industrial growth corridor (update suite / plot to your exact address)",
+      "Industrial growth corridor",
       "Madri–Bhuwana link road vicinity",
       "Udaipur, Rajasthan 313031",
       "India",
@@ -62,7 +62,7 @@ export const offices: Office[] = [
     country: "United Arab Emirates",
     role: "Client engagement & regional operations",
     addressLines: [
-      "Business Bay (update tower / suite to your exact address)",
+      "Business Bay",
       "Dubai, UAE",
     ],
     hours: "Sun–Thu · 09:00–18:00 GST (GMT+4)",
