@@ -15,6 +15,9 @@ export const company = {
   contactEmail: "hello@sparustechnology.com",
   privacyEmail: "privacy@sparustechnology.com",
   careersEmail: "careers@sparustechnology.com",
+  /** Path under /public — e.g. /images/team-office.jpg */
+  teamPhotoSrc: "/images/team-office.png",
+  teamPhotoAlt: "Sparus Technology team at the Udaipur studio",
 } as const;
 
 /** Editorial copy for About — replace dates or metrics with your facts. */

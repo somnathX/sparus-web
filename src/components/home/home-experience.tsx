@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { company } from "@/content/company";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -602,11 +603,14 @@ export function HomeExperience() {
                 </div>
               </div>
               <div className="ed-asset ed-rv ed-d2">
-                <span className="ed-mono">
-                  [ ASSET SLOT — TEAM / OFFICE PHOTO · 3:2 ]
-                  <br />
-                  drop your image here later
-                </span>
+                <Image
+                  src={company.teamPhotoSrc}
+                  alt={company.teamPhotoAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 980px) 100vw, 55vw"
+                  quality={85}
+                />
               </div>
             </div>
             <div className="ed-values ed-rv ed-d1">

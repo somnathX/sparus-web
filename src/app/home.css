@@ -766,21 +766,13 @@
 }
 
 .ed-asset {
-  border: 1px dashed var(--ed-ink-30);
+  position: relative;
+  border: 1px solid var(--ed-ink);
   border-radius: 2px;
   margin-top: 44px;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent 0 10px,
-    rgba(17, 20, 23, 0.035) 10px 20px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
-  color: var(--ed-ink-30);
-  text-align: center;
-  padding: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: var(--ed-paper-2);
 }
 
 .ed-off-grid {
