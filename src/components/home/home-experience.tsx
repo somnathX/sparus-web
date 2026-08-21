@@ -250,6 +250,8 @@ const FOOT_SITE = [
 ];
 
 const FOOT_LEGAL = [
+  { href: "/pricing", label: "Pricing" },
+  { href: "/refund", label: "Refund & Cancellation" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
   { href: "/cookies", label: "Cookie Policy" },
@@ -316,7 +318,7 @@ export function EditorialFooter() {
 
         <div className="ed-foot-in">
           <span>
-            © {new Date().getFullYear()} {company.legalName}
+            © {new Date().getFullYear()} {company.legalName} · CIN {company.cin}
           </span>
           <span>Udaipur, India · Dubai, UAE</span>
           <span>Built to work in production.</span>
@@ -787,6 +789,14 @@ export function HomeExperience() {
             {company.contactEmail.replace("@", "@\u200b")}
           </a>
           <div className="ed-contact-rows ed-rv ed-d2">
+            <div className="ed-crow">
+              <span className="k">Phone</span>
+              <a href={`tel:${company.phoneHref}`}>{company.phone}</a>
+            </div>
+            <div className="ed-crow">
+              <span className="k">Registered office</span>
+              <span>{offices[0].addressLines.join(", ")}</span>
+            </div>
             <div className="ed-crow">
               <span className="k">Careers</span>
               <a href={`mailto:${company.careersEmail}`}>{company.careersEmail}</a>

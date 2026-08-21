@@ -94,6 +94,12 @@ export function ContactSection() {
               >
                 {company.contactEmail}
               </a>
+              <a
+                href={`tel:${company.phoneHref}`}
+                className="block font-mono text-[11px] text-muted hover:text-accent"
+              >
+                {company.phone}
+              </a>
             </div>
             <div className="mt-10 hidden border-l-2 border-accent pl-6 lg:block">
               <p className="font-heading text-lg italic leading-snug text-foreground/80">

@@ -3,8 +3,10 @@
  */
 
 export const company = {
-  legalName: "Sparus Technology",
+  legalName: "Sparus Technology Private Limited",
   shortName: "Sparus",
+  /** Corporate Identity Number — shown in the footer per MCA norms for Indian companies */
+  cin: "U62013RJ2024PTC092407",
   tagline:
     "Product engineering, applied AI, and infrastructure for teams who care what production feels like.",
   linkedinUrl: "https://www.linkedin.com/company/sparus-tech",
@@ -12,9 +14,12 @@ export const company = {
   twitterUrl: "",
   /** Org or company profile; leave empty to hide the footer icon */
   githubUrl: "",
-  contactEmail: "hello@sparustechnology.com",
-  privacyEmail: "privacy@sparustechnology.com",
-  careersEmail: "careers@sparustechnology.com",
+  contactEmail: "hello@sparustech.com",
+  privacyEmail: "privacy@sparustech.com",
+  careersEmail: "careers@sparustech.com",
+  /** Registered-office contact number */
+  phone: "+91 91166 25977",
+  phoneHref: "+919116625977",
   /** Path under /public — e.g. /images/team-office.jpg */
   teamPhotoSrc: "/images/team-office.png",
   teamPhotoAlt: "Sparus Technology team at the Udaipur studio",
@@ -47,15 +52,15 @@ export const offices: Office[] = [
     city: "Udaipur",
     region: "Rajasthan",
     country: "India",
-    role: "Headquarters, product engineering & delivery center",
+    role: "Registered office, product engineering & delivery center",
     addressLines: [
-      "Industrial growth corridor",
-      "Madri–Bhuwana link road vicinity",
-      "Udaipur, Rajasthan 313031",
+      "165 Jeevan Tara, Goverdhan Vilas",
+      "Udaipur City, Girwa",
+      "Udaipur, Rajasthan 313001",
       "India",
     ],
     hours: "Mon–Fri · 10:00–19:00 IST (GMT+5:30)",
-    mapQuery: "Udaipur Rajasthan India tech park",
+    mapQuery: "165 Jeevan Tara, Goverdhan Vilas, Udaipur, Rajasthan 313001",
   },
   {
     id: "dubai",
