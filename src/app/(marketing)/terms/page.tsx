@@ -31,7 +31,11 @@ export default function TermsPage() {
       </p>
 
       <h2>Permitted use</h2>
-      <p>You may use the site to learn about Sparus and to contact us lawfully.</p>
+      <p>
+        You may use the site to learn about Sparus and to contact us lawfully.
+        Our <a href="/acceptable-use">Acceptable Use Policy</a> expands on the
+        list below and forms part of these Terms.
+      </p>
       <p>You agree not to:</p>
       <ul>
         <li>
@@ -79,6 +83,10 @@ export default function TermsPage() {
       </p>
 
       <h2>Disclaimers</h2>
+      <p>
+        See our <a href="/disclaimer">Disclaimer</a> for the full statement on
+        advice, accuracy, and outcomes.
+      </p>
       <p>
         The site and its content are provided{" "}
         <strong className="text-foreground/90">“as is”</strong> and{" "}

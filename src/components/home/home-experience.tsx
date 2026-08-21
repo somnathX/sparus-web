@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { company } from "@/content/company";
+import { company, offices } from "@/content/company";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 const NAV_SECTIONS = ["services", "who", "about", "offices", "contact"] as const;
@@ -241,17 +241,86 @@ export function EditorialHeader({ enableSpy = false }: EditorialHeaderProps) {
   );
 }
 
+const FOOT_SITE = [
+  { href: "/services", label: "Services" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/locations", label: "Locations" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+
+const FOOT_LEGAL = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/cookies", label: "Cookie Policy" },
+  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/acceptable-use", label: "Acceptable Use" },
+];
+
 export function EditorialFooter() {
   return (
     <footer className="ed-foot">
-      <div className="ed-wrap ed-foot-in">
-        <span className="ed-logo ed-disp">
-          Sparus<em style={{ fontStyle: "normal", color: "var(--ed-cobalt)" }}>.</em>
-        </span>
-        <span>
-          © {new Date().getFullYear()} {company.legalName} · Udaipur / Dubai
-        </span>
-        <span>Built to work in production.</span>
+      <div className="ed-wrap">
+        <div className="ed-foot-top">
+          <div className="ed-foot-brand">
+            <span className="ed-logo ed-disp">
+              Sparus<em style={{ fontStyle: "normal", color: "var(--ed-cobalt)" }}>.</em>
+            </span>
+            <p className="ed-foot-lede">{company.tagline}</p>
+            <a className="ed-foot-mail" href={`mailto:${company.contactEmail}`}>
+              {company.contactEmail.replace("@", "@\u200b")}
+            </a>
+            {company.linkedinUrl && (
+              <a
+                className="ed-foot-social"
+                href={company.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+            )}
+          </div>
+
+          <nav className="ed-foot-col" aria-label="Site">
+            <h2 className="ed-foot-h">Explore</h2>
+            {FOOT_SITE.map((l) => (
+              <Link key={l.href} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+
+          <nav className="ed-foot-col" aria-label="Legal">
+            <h2 className="ed-foot-h">Legal</h2>
+            {FOOT_LEGAL.map((l) => (
+              <Link key={l.href} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="ed-foot-col ed-foot-offices">
+            <h2 className="ed-foot-h">Offices</h2>
+            {offices.map((o) => (
+              <div key={o.id} className="ed-foot-office">
+                <span className="ed-foot-city">{o.city}</span>
+                <span className="ed-foot-note">
+                  {o.region === o.city ? o.country : `${o.region}, ${o.country}`}
+                </span>
+                <span className="ed-foot-note">{o.hours}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="ed-foot-in">
+          <span>
+            © {new Date().getFullYear()} {company.legalName}
+          </span>
+          <span>Udaipur, India · Dubai, UAE</span>
+          <span>Built to work in production.</span>
+        </div>
       </div>
     </footer>
   );

@@ -89,6 +89,10 @@ export default function PrivacyPage() {
         settings. If we deploy non-essential cookies in a jurisdiction that
         requires it, we will surface a consent mechanism before they run.
       </p>
+      <p>
+        Our <a href="/cookies">Cookie Policy</a> sets out the categories we use,
+        how long they last, and how to control them.
+      </p>
 
       <h2>Retention</h2>
       <p>
