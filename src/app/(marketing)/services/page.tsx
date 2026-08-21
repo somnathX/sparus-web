@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 const pillars = [
   {
     n: "I",
-    title: "Software development",
-    body: "Greenfield products, legacy modernization, and API platforms. Testability, observability, and documentation so your team owns the codebase long-term.",
+    title: "Custom software development",
+    body: "We design, build, and maintain web and backend applications, APIs, and integrations for businesses—new products as well as modernization of existing systems. Deliverables include source code, tests, and documentation so your team can own the software long-term.",
   },
   {
     n: "II",
     title: "AI integration",
-    body: "Retrieval, agents, batch inference, and evaluation harnesses—wired to your data posture and compliance requirements, not slideware.",
+    body: "We integrate AI and machine-learning capabilities into your products: retrieval and search, chat and agent workflows, batch inference, and evaluation—built around your data and compliance requirements.",
   },
   {
     n: "III",
-    title: "Infrastructure & DevOps",
-    body: "Multi-cloud and hybrid patterns, IaC, CI/CD, and runbooks written for the 3 a.m. page. Cost-aware, recoverable, observable.",
+    title: "Cloud infrastructure & DevOps",
+    body: "We set up and manage cloud infrastructure, CI/CD pipelines, infrastructure-as-code, monitoring, and on-call runbooks across major cloud providers—cost-aware, recoverable, and observable.",
   },
 ];
 
@@ -40,9 +40,13 @@ export default function ServicesPage() {
             How we show up
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-            One partner for product, intelligence, and the platform underneath.
-            We align to outcomes—releases, SLOs, and margin—not ticket velocity
-            for its own sake.
+            Sparus Technology Private Limited provides software engineering, AI
+            integration, and cloud infrastructure services to businesses. Every
+            engagement is scoped and quoted individually—see{" "}
+            <Link href="/pricing" className="text-accent link-strike">
+              Pricing
+            </Link>{" "}
+            for how we bill.
           </p>
         </header>
 

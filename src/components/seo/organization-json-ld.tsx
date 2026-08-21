@@ -13,11 +13,19 @@ export function OrganizationJsonLd() {
     description: company.tagline,
     sameAs: [company.linkedinUrl],
     email: company.contactEmail,
+    telephone: company.phoneHref,
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "CIN",
+      value: company.cin,
+    },
     ...(hq && {
       address: {
         "@type": "PostalAddress",
+        streetAddress: hq.addressLines.slice(0, 2).join(", "),
         addressLocality: hq.city,
         addressRegion: hq.region,
+        postalCode: "313001",
         addressCountry: hq.country,
       },
     }),

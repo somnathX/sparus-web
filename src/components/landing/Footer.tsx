@@ -11,6 +11,8 @@ const footerLinks = [
 ];
 
 const legalLinks = [
+  { href: "/pricing", label: "Pricing" },
+  { href: "/refund", label: "Refund" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
 ];
@@ -101,7 +103,10 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-2 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
-            © {new Date().getFullYear()} Sparus Technology
+            © {new Date().getFullYear()} {company.legalName}
+            <span className="ml-2 normal-case tracking-normal text-muted/70">
+              · CIN {company.cin}
+            </span>
           </p>
           <p className="font-mono text-[10px] text-muted/70">
             India (IST) · UAE (GST) · Remote-friendly worldwide

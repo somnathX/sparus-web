@@ -5,10 +5,13 @@ export function LegalPage({
   title,
   updated,
   children,
+  showStarterNote = false,
 }: {
   title: string;
   updated: string;
   children: React.ReactNode;
+  /** Opt in to the "starter legal language" banner (off for live policy pages). */
+  showStarterNote?: boolean;
 }) {
   return (
     <div className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
@@ -25,10 +28,12 @@ export function LegalPage({
         <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           Last updated · {updated}
         </p>
-        <p className="mt-6 border-l-2 border-accent pl-4 text-sm italic text-muted">
-          This is starter legal language for a marketing site. Have counsel
-          review before you rely on it in contracts or disputes.
-        </p>
+        {showStarterNote && (
+          <p className="mt-6 border-l-2 border-accent pl-4 text-sm italic text-muted">
+            This is starter legal language for a marketing site. Have counsel
+            review before you rely on it in contracts or disputes.
+          </p>
+        )}
         <div className="legal-doc mt-12 text-sm leading-relaxed text-muted">
           {children}
         </div>
